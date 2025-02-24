@@ -10,10 +10,13 @@ function FoodDisplay({ category }) {
             <h2 className="text-4xl font-medium mb-3">Top dishes near you</h2>
             <div className="flex justify-between flex-wrap gap-5">
                 {food_list.map((item, idx) => {
-                    return (
-                        <FoodItem id={item._id} name={item.name} price={item.price} description={item.description} image={item.image} key={idx} />
+                    if (category === "All" || category === item.category) {
+                        return (
+                            <FoodItem id={item._id} name={item.name} price={item.price} description={item.description} image={item.image} key={idx} />
 
-                    )
+                        )
+                    }
+
                 })}
             </div>
         </div>

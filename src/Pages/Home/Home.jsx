@@ -4,7 +4,7 @@ import Header from "../../Components/Header/Header";
 import FoodDisplay from "../../Components/FoodDisplay/FoodDisplay";
 
 function Home() {
-    const [category,setCategory] = useState()
+    const [category,setCategory] = useState("All")
     return (
         <div>
             <Header />
