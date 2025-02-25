@@ -7,8 +7,8 @@ function FoodDisplay({ category }) {
     const { food_list } = useContext(StoreContext)
     return (
         <div className="mt-3">
-            <h2 className="text-4xl font-medium mb-3">Top dishes near you</h2>
-            <div className="flex justify-between flex-wrap gap-5">
+            <h2 className="text-4xl font-medium mb-7">Top dishes near you</h2>
+            <div className="flex md:justify-between flex-wrap justify-center gap-5">
                 {food_list.map((item, idx) => {
                     if (category === "All" || category === item.category) {
                         return (
