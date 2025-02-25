@@ -2,12 +2,12 @@ import { assets } from "../../../assets/frontend_assets/assets"
 
 function Footer() {
     return (
-        <div className="footer-container flex flex-col items-center gap-5 text-[#d9d9d9] bg-[#323232] px-[8vw] py-5 pt-20 mt-24">
+        <div className="footer-container flex flex-col items-center gap-5 text-[#d9d9d9] bg-[#323232] px-[8vw] py-5 pt-20 mt-24" id="contact">
             <div className="footer-sub-container flex flex-col gap-10 md:flex-row justify-between">
                 <div className="footer-left flex flex-col gap-5 items-start basis-[45%]">
                     <img className="w-40" src={assets.logo} />
                     <p className="font-serif">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam soluta, voluptatibus quod reprehenderit nisi illum consequuntur. Inventore eveniet amet aspernatur!</p>
-                    <div className="flex gap-2.5">
+                    <div className="flex gap-4">
                         <img className="h-10" src={assets.facebook_icon} />
                         <img className="h-10" src={assets.twitter_icon} />
                         <img className="h-10" src={assets.linkedin_icon} />

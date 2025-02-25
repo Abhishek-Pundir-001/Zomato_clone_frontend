@@ -2,9 +2,9 @@ import { menu_list } from "../../../assets/frontend_assets/assets"
 
 function ExploreMenu({category,setCategory}) {
     return (
-            <div className="mt-6 flex flex-col gap-5">
+            <div className="mt-6 flex flex-col gap-5" id='explore-menu'>
                 <h2 className="text-3xl font-medium text-[#262626]">Explore our menu</h2>
-                <p className="max-w-[1000%] md:max-w-[100%]">choose from a diverse menu featuring a delectable array of dishes crafted with finest ingeidents and culinatry expertise .our mission is to satisfy your cravings and elevate your dining experience , one delicious meal at a time</p>
+                <p className="max-w-[100%] md:max-w-[60%]">choose from a diverse menu featuring a delectable array of dishes crafted with finest ingeidents and culinatry expertise .our mission is to satisfy your cravings and elevate your dining experience , one delicious meal at a time</p>
                 <div className="flex justify-between gap-8 my-5 overflow-x-auto w-full">
                     {menu_list.map((menu, idx) => {
                         return (

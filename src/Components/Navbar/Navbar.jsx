@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { assets } from "../../../assets/frontend_assets/assets"
+import {Link} from 'react-router-dom'
 
 function Navbar() {
 
@@ -10,10 +11,10 @@ function Navbar() {
         <div className="navbar py-5 flex justify-between items-center">
             <img className="h-5" src={assets.logo} />
             <ul className="md:flex gap-3 list-none text-[#49557e] text-lg hidden">
-                <li onClick={() => setMenu('Home')} className={`${menu === "Home" ? `underline` : ''} cursor-pointer`}>Home</li>
-                <li onClick={() => setMenu('menu')} className={`${menu === "menu" ? `underline` : ''} cursor-pointer`}>menu</li>
-                <li onClick={() => setMenu('mobile-app')} className={`${menu === "mobile-app" ? `underline` : ''} cursor-pointer`}>mobile-app</li>
-                <li onClick={() => setMenu('contact us')} className={`${menu === "contact us" ? `underline` : ''} cursor-pointer`}>contact us</li>
+                <Link to='/' onClick={() => setMenu('Home')} className={`${menu === "Home" ? `underline` : ''} cursor-pointer`}>Home</Link>
+                <a href="#explore-menu" onClick={() => setMenu('menu')} className={`${menu === "menu" ? `underline` : ''} cursor-pointer`}>menu</a>
+                <a href="#app-download" onClick={() => setMenu('mobile-app')} className={`${menu === "mobile-app" ? `underline` : ''} cursor-pointer`}>mobile-app</a>
+                <a href="#contact" onClick={() => setMenu('contact us')} className={`${menu === "contact us" ? `underline` : ''} cursor-pointer`}>contact us</a>
             </ul>
             <div className="nav-right flex items-center gap-4 md:gap-7">
                 <img src={assets.search_icon} />
