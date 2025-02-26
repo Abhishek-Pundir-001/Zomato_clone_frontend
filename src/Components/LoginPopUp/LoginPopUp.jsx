@@ -10,7 +10,7 @@ function LoginPopUp({ setCurrState }) {
                     <h2 className="text-xl font-bold font-serif">{currForm}</h2>
                     <img className="h-4 cursor-pointer" onClick={() => setCurrState(false)} src={assets.cross_icon} />
                 </div>
-                <form action="" className="flex flex-col gap-3.5">
+                <form className="flex flex-col gap-3.5">
                     {currForm === "Sign up" ? <input className="bg-transparent border-2 outline-none rounded-lg px-2 py-1" type="text" placeholder="Your name" name="" id="" /> : <></>}
                     <input type="email" placeholder="Your email" className="bg-transparent rounded-lg px-2 py-1 border-2 outline-none "/>
                     <input type="password" placeholder="password" className="bg-transparent rounded-lg px-2 py-1 border-2 outline-none "/>

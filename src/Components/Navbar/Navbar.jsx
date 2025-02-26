@@ -19,7 +19,7 @@ function Navbar({setCurrState}) {
             <div className="nav-right flex items-center gap-4 md:gap-7">
                 <img src={assets.search_icon} />
                 <div className="relative">
-                    <img className="w-5" src={assets.basket_icon} />
+                   <Link to='/cart'><img className="w-5" src={assets.basket_icon} /></Link> 
                     <div className="dot h-2 w-2 bg-orange-600 rounded-lg absolute top-[-8px] left-6"></div>
                 </div>
                 <button onClick={()=>setCurrState(true)} className="px-4 py-1.5 md:px-8 md:py-2 text-lg text-[#49557e] rounded-[50px] cursor-pointer border border-orange-600 hover:bg-[#fff4f2] transition-all ease-in-out">Sign&nbsp;in</button>
