@@ -2,7 +2,7 @@ import { useState } from "react"
 import { assets } from "../../../assets/frontend_assets/assets"
 import {Link} from 'react-router-dom'
 
-function Navbar() {
+function Navbar({setCurrState}) {
 
     const [menu, setMenu] = useState("Home");
 
@@ -22,7 +22,7 @@ function Navbar() {
                     <img className="w-5" src={assets.basket_icon} />
                     <div className="dot h-2 w-2 bg-orange-600 rounded-lg absolute top-[-8px] left-6"></div>
                 </div>
-                <button className="px-4 py-1.5 md:px-8 md:py-2 text-lg text-[#49557e] rounded-[50px] cursor-pointer border border-orange-600 hover:bg-[#fff4f2] transition-all ease-in-out">Sign&nbsp;in</button>
+                <button onClick={()=>setCurrState(true)} className="px-4 py-1.5 md:px-8 md:py-2 text-lg text-[#49557e] rounded-[50px] cursor-pointer border border-orange-600 hover:bg-[#fff4f2] transition-all ease-in-out">Sign&nbsp;in</button>
             </div>
         </div>
     )
