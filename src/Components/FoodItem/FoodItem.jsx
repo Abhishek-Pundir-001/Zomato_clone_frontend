@@ -1,9 +1,8 @@
-import { useContext, useState } from "react"
+import { useContext } from "react"
 import { assets } from "../../../assets/frontend_assets/assets"
 import { StoreContext } from "../../Context/StoreContext"
 
-function FoodItem({ id, name, price, description, image }) {
-    const [itemCount, setItemCount] = useState(0)
+function FoodItem({ id, name, price, description, image })  {
     const { cartItems, addToCart, removeFromCart } = useContext(StoreContext)
     return (
         <div className="relative flex flex-col gap-1 items-center rounded-lg">
