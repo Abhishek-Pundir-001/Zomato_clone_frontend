@@ -1,8 +1,10 @@
 import { useContext, useState } from "react"
 import { StoreContext } from "../../Context/StoreContext"
+import { useNavigate } from "react-router-dom"
 
 function Cart() {
     const { food_list, cartItems, removeFromCart,getCartTotal } = useContext(StoreContext)
+    const navigate = useNavigate() 
     const cartValue = getCartTotal()
     return (
         <div className="mt-5">
@@ -56,7 +58,7 @@ function Cart() {
                         </div>
                         <hr />
                     </div>
-                    <button className="py-3 text-white text-lg bg-orange-600 hover:bg-orange-500 cursor-pointer rounded-lg">Proceed to checkout</button>
+                    <button onClick={()=> navigate('/order')} className="py-3 text-white text-lg bg-orange-600 hover:bg-orange-500 cursor-pointer rounded-lg">Proceed to checkout</button>
                 </div>
 
                 <div className="promocode text-center">
