@@ -7,8 +7,7 @@ import { StoreContext } from "../../Context/StoreContext";
 
 
 function LoginPopUp({ setCurrState }) {
-    const {token,setToken} = useContext(StoreContext)
-    const url = 'http://localhost:4000'
+    const {token,setToken,url} = useContext(StoreContext)
     const [currForm, setCurrForm] = useState("signUp");
     let [checkbox, setCheckBox] = useState(false)
     const [userData, setUserData] = useState({

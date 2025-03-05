@@ -35,9 +35,9 @@ function Navbar({ setCurrState }) {
                 <div className="relative cursor-pointer" onMouseOver={()=>setDropDown(true)} onMouseLeave={()=>setDropDown(false)}>
                     <img src={assets.profile_icon}/>
                     <ul className={`${dropdown ? "flex flex-col  gap-2.5":"hidden"} shadow-[0_0_5px_black] absolute right-0 bg-green-900 z-10 p-5 text-white rounded-sm`}>
-                        <ll><img src={assets.bag_icon} alt="" className="w-5"/><p className="hover:text-orange-300 text-sm">Orders</p></ll>
+                        <li className="flex items-center gap-2 w-16"><img src={assets.bag_icon} alt="" className="w-5"/><p className="hover:text-orange-300 text-sm">Orders</p></li>
                         <hr/>
-                        <li onClick={logout}><img src={assets.logout_icon} alt="" className="w-5"/><p className="hover:text-orange-300 text-sm">Logout</p></li>
+                        <li className="flex items-center gap-2 w-16" onClick={logout}><img src={assets.logout_icon} alt="" className="w-5"/><p className="hover:text-orange-300 text-sm">Logout</p></li>
                     </ul>
                 </div>
                 }
