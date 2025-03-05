@@ -5,6 +5,7 @@ export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
     const [cartItems, setCartItems] = useState({});
+    const [token,setToken] = useState(localStorage.getItem("token" || ""))
 
     const addToCart = (itemId) => {
 
@@ -34,7 +35,7 @@ const StoreContextProvider = (props) => {
     }
 
     useEffect(() => {
-        console.log(cartItems)
+        // console.log(cartItems)
     }, [cartItems])
 
 
@@ -44,7 +45,9 @@ const StoreContextProvider = (props) => {
         setCartItems,
         addToCart,
         removeFromCart,
-        getCartTotal
+        getCartTotal,
+        token,
+        setToken
     }
 
     return (
