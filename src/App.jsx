@@ -8,6 +8,7 @@ import Cart from './Pages/Cart/Cart';
 import Placeholder from './Pages/Placeorder/Placeorder';
 import Footer from './Components/Footer/Footer';
 import LoginPopUp from './Components/LoginPopUp/LoginPopUp';
+import Verify from './Pages/Verify/Verify';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/order' element={<Placeholder />} />
+          <Route path='/verify' element={<Verify />} />
         </Routes>
       </div>
       <Footer />

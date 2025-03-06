@@ -61,14 +61,14 @@ const StoreContextProvider = (props) => {
 
     useEffect(() => {
         // console.log(cartItems)
-        async function loadData(params) {
+        async function loadData() {
            await fetchFoodItems()
            await fetchCartData()
         }
 
         loadData()
         
-    },[cartItems])
+    },[])
 
 
     const contextValue = {
