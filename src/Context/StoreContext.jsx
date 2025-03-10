@@ -19,9 +19,11 @@ const StoreContextProvider = (props) => {
         }
         if (!cartItems[itemId]) {
             // console.log(itemId)
+            toast.success("added to cart")
             setCartItems((prev) => ({ ...prev, [itemId]: 1 }))
         }
         else {
+            toast.success("added to cart")
             setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }))
         }
         
@@ -29,7 +31,8 @@ const StoreContextProvider = (props) => {
     } 
 
     const removeFromCart = async (itemId) => {
-        setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }))
+        setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
+        toast.error("remove from the cart")
         await axios.post(`${url}/api/cart/remove`,{itemId},{headers:{token}})
     }
 

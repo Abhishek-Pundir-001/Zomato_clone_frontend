@@ -41,7 +41,7 @@ function MyOrders(){
                             <p>${order.amount}</p>
                             <p>items: {order.items.length}</p>
                             <p><span className="text-orange-600">&#x25cf;</span><b className="font-medium text-[#454545] ml-0.5">{order.status}</b></p>
-                            <button className="bg-[#ffe1e1] py-3 rounded-sm cursor-pointer text-[#454545]">Track order</button>
+                            <button onClick={getOrdersData} className="bg-[#ffe1e1] py-3 rounded-sm cursor-pointer text-[#454545]">Track order</button>
                         </div>
                     )
                 })}
