@@ -11,7 +11,7 @@ function MyOrders(){
     async function getOrdersData(){
         const response = await axios.post(`${url}/api/order/userorders`,{},{headers:{token}});
         if(response?.data?.success){
-            console.log(response?.data?.orders)
+            // console.log(response?.data?.orders)
             setData(response?.data?.orders)
         }
     }
